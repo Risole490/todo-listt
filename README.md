@@ -9,6 +9,10 @@ Uma lista de tarefas interativa feita com React. Este é meu primeiro projeto pe
 
 - Criar, editar e excluir tarefas
 - Desenvolvida para dispositivos móveis de até 430px
+
+## Em andamento
+- Implementação de interação com o Local Storage para armazenar os dados das tarefas
+
 ## Feedback
 
 Se você tiver algum feedback, fique a vontade para compartilhar comigo: lyrsit@protonmail.com
