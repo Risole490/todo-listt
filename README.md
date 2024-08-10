@@ -1,3 +1,27 @@
+
+# TODO List
+
+Uma lista de tarefas interativa feita com React. 
+
+
+
+## Funcionalidades
+
+- Criar, editar e excluir tarefas
+- Desenvolvida para dispositivos móveis de até 430px
+## Feedback
+
+Se você tiver algum feedback, fique a vontade para compartilhar comigo: lyrsit@protonmail.com
+
+
+## Licenças
+
+[MIT](https://choosealicense.com/licenses/mit/)
+## Referência
+
+ - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+ - [Awesome README](https://github.com/matiassingers/awesome-readme)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
