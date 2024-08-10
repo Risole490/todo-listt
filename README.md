@@ -1,7 +1,7 @@
 
 # TODO List
 
-Uma lista de tarefas interativa feita com React. 
+Uma lista de tarefas interativa feita com React. Este é meu primeiro projeto pessoal utilizando React.
 
 
 
