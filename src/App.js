@@ -1,24 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import { useState } from 'react';
+
+import Header from './components/Header';
+import Banner from './components/Banner';
+import Formulario from './components/Form';
+import Tarefas from './components/Tarefas';
+
+const AppContainer = styled.div`
+  width: 100vw;
+  height: 100vh;
+`
 
 function App() {
+  const [tarefas, setTarefas] = useState([]);
+
+  const marcarConcluida = (index) => {
+    const novasTarefas = [...tarefas];
+    novasTarefas[index].concluida = !novasTarefas[index].concluida;
+    setTarefas(novasTarefas);
+  };
+
+  const editarTarefa = (index, novoTexto) => {
+      const novasTarefas = [...tarefas];
+      novasTarefas[index].texto = novoTexto;
+      setTarefas(novasTarefas);
+  };
+
+  const excluirTarefa = (index) => {
+      const novasTarefas = tarefas.filter((_, i) => i !== index);
+      setTarefas(novasTarefas);
+  };
+
+  const novaTarefaCriada = (tarefa) => {
+    setTarefas([...tarefas, tarefa]);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContainer>
+      <Header />
+      <Banner />
+      <Formulario aoCriarTarefa={tarefa => novaTarefaCriada(tarefa)}/>
+      
+      <Tarefas 
+        tarefas={tarefas}
+        marcarConcluida={marcarConcluida}
+        editarTarefa={editarTarefa}
+        excluirTarefa={excluirTarefa}
+      />
+    </AppContainer>
   );
 }
 
