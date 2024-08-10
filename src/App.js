@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Banner from './components/Banner';
 import Formulario from './components/Form';
 import Tarefas from './components/Tarefas';
+import Footer from './components/Footer';
 
 const AppContainer = styled.div`
   width: 100vw;
@@ -47,6 +48,7 @@ function App() {
         editarTarefa={editarTarefa}
         excluirTarefa={excluirTarefa}
       />
+      <Footer />
     </AppContainer>
   );
 }

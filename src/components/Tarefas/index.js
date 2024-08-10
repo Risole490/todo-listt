@@ -44,12 +44,10 @@ const tarefaConcluida = {
 };
 
 const editandoTarefa = {
+    border: '2px solid #ccc',
     padding: '5px',
-    border: '1px solid #ccc',
-    borderRadius: '3px',
     fontSize: '18px',
 };
-
 
 const Tarefas = (props) => {
     const [editandoIndex, setEditandoIndex] = useState(null);
@@ -81,9 +79,9 @@ const Tarefas = (props) => {
 
                                 {editandoIndex === index ? (
                                     <input 
-                                        type="text"
-                                        style={editandoTarefa} 
+                                        type="text" 
                                         value={novoTexto} 
+                                        style={editandoTarefa}
                                         onChange={(e) => setNovoTexto(e.target.value)} 
                                         onBlur={() => salvarEdicao(index)}
                                         onKeyDown={(e) => {

@@ -5,9 +5,11 @@ import CampoTexto from '../CampoTexto';
 
 const AdicionarTarefaContainer = styled.form`
     display: flex;
+    max-width: 430px;
     flex-direction: column;
+    justify-content: center;
     align-items: left;
-    gap: 10px;
+    gap: 8px;
     margin: 0px 20px 20px 20px;
 `;
 
@@ -17,10 +19,13 @@ const Botao = styled.button`
     padding: 5px;
     cursor: pointer;
     width: 100px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
 `;
 
 const Formulario = (props) => {
-
     const [tarefa, setTarefa] = useState('');
     const [concluida, setConcluida] = useState(false);
 
